@@ -35,7 +35,7 @@
       <td>
           {{ repo.forks }}
         </td>
-      <routerLink :to="'/repo/' + repo.owner.login + '/' + repo.name"
+      <routerLink :to="'/repos/' + repo.owner.login + '/' + repo.name"
       ><td>
         <svg
           xmlns="http://www.w3.org/2000/svg"

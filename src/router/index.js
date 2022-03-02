@@ -27,6 +27,11 @@ const routes = [
     component: () => import('../views/ReposView.vue')
   },
   {
+    path: '/repos/:id/:repoName',
+    name: 'reposDetails',
+    component: () => import('../views/RepoDetails.vue')
+  },
+  {
     path: '/users/:id/gists',
     name: 'gists',
     component: () => import('../views/GistView.vue')
