@@ -18,10 +18,10 @@
           <router-link :to="{name:'following'}"
             >Following: {{ user.following }}</router-link
           >
-          <router-link :to="['repos']"
+          <router-link :to="{name:'repos'}"
             >Repos:{{ user.public_repos }}</router-link
           >
-          <router-link :to="['gists']"
+          <router-link :to="{name:'gists'}"
             >Gists:{{ user.public_gists }}</router-link
           >
         </div>
@@ -43,7 +43,7 @@ export default {
   },
 };
 </script>
-<style lang="scss">
+<style scoped lang="scss">
 .profile {
   height: 150px;
   width: auto;

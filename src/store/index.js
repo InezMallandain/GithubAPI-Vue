@@ -2,6 +2,8 @@ import { createStore } from 'vuex'
 import userList from "./userList";
 import userDetails from "./userDetails"
 import follow from "./follow";
+import repos from "./repos";
+import gists from "./gist";
 export default createStore({
   state: {
   },
@@ -14,6 +16,8 @@ export default createStore({
   modules: {
     userList,
     userDetails,
-    follow
+    follow,
+    repos,
+    gists
   }
 })
