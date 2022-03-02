@@ -1,5 +1,7 @@
 import { createStore } from 'vuex'
-import userList from "./userlist";
+import userList from "./userList";
+import userDetails from "./userDetails"
+import follow from "./follow";
 export default createStore({
   state: {
   },
@@ -10,6 +12,8 @@ export default createStore({
   actions: {
   },
   modules: {
-    userList
+    userList,
+    userDetails,
+    follow
   }
 })

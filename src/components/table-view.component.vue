@@ -20,8 +20,8 @@
       <td>
         <img class="profile" :src="user.avatar_url" :alt="user.login" />
       </td>
-      <a
-        ><td>
+      <router-link :to="'/user/' + user.login">
+        <td>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -36,7 +36,7 @@
             />
           </svg>
         </td>
-      </a>
+      </router-link>
     </tr>
   </tbody>
 </table>
