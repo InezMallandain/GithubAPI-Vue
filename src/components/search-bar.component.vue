@@ -27,7 +27,7 @@ export default {
   },
   methods: {
     onSearch() {
-      this.$store.dispatch("fetchUserList", this.searchText);
+      this.$emit('search', this.searchText);
     }
   }
 };
