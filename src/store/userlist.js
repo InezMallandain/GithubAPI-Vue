@@ -11,7 +11,7 @@ const userListStore = {
   },
   actions: {
     // fetchUserList
-    async fetchUserList({ commit }, payload = "test") {
+    async fetchUserList({ commit }, payload = "vue") {
       await axios
         .get(`https://api.github.com/search/users?q=${payload}&page=1&per_page=10`)
         .then((res) => {

@@ -1,11 +1,15 @@
 <template>
-  <nav class="mx-3">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  <AppNav />
   <div class="px-5">
     <router-view />
   </div>
 </template>
-
+<script>
+import AppNav from "./components/nav-bar.component.vue";
+export default {
+  components: {
+    AppNav,
+  },
+};
+</script>
 <style></style>
