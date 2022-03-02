@@ -1,6 +1,6 @@
 <template>
 <div>
-  <table class="table" v-if="users.length > 1">
+  <table class="table" v-if="users.length > 0">
   <thead>
     <tr>
       <th scope="col">index</th>

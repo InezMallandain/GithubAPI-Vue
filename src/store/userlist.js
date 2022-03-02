@@ -6,14 +6,14 @@ const userListStore = {
   }),
   mutations: {
     SET_USER_LIST(state, payload) {
-      state.users = payload;
+      state.users = [...payload];
     },
   },
   actions: {
     // fetchUserList
-    async fetchUserList({ commit }) {
+    async fetchUserList({ commit }, payload = "test") {
       await axios
-        .get("https://api.github.com/search/users?q=test&page=1&per_page=10")
+        .get(`https://api.github.com/search/users?q=${payload}&page=1&per_page=10`)
         .then((res) => {
           // check if response has items property
           if (res.data.items) {
