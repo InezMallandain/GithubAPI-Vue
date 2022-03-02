@@ -1,0 +1,72 @@
+<template>
+<div>
+  <table class="table" v-if="users.length > 1">
+  <thead>
+    <tr>
+      <th scope="col">index</th>
+      <th scope="col">Username</th>
+      <th scope="col">User Type</th>
+      <th scope="col">Profile Image</th>
+      <th scope="col">
+        <!--  Actions -->
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr v-for="(user, index) of users" :key="index">
+      <td scope="row">{{ index + 1 }}</td>
+      <td>{{ user.login }}</td>
+      <td>{{ user.type }}</td>
+      <td>
+        <img class="profile" :src="user.avatar_url" :alt="user.login" />
+      </td>
+      <a
+        ><td>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-arrow-right"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+            />
+          </svg>
+        </td>
+      </a>
+    </tr>
+  </tbody>
+</table>
+  <div v-else class="d-flex justify-content-center align-content-center">
+    <div class="spinner-border" role="status">
+      <span class="sr-only"></span>
+    </div>
+  </div>
+</div>
+</template>
+<script>
+export default {
+  props: {
+    users: {
+      type: Array,
+      required: true,
+      default: () => []
+    }
+  },
+  data: () => {
+    return {
+      
+    }
+  }
+}
+</script>
+<style scoped lang="scss">
+  .profile{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+</style>
