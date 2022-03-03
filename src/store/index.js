@@ -1,5 +1,5 @@
 import { createStore } from 'vuex'
-import userList from "./userList";
+import userList from "./userlist";
 import userDetails from "./userDetails"
 import follow from "./follow";
 import repos from "./repos";
